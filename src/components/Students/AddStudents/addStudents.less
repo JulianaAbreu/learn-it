@@ -1,16 +1,53 @@
-@import url('../../../assets/styles/_variables.less');
+@import url("../../../assets/styles/_variables.less");
 
 .content-student {
-    margin-top: 20%;
-
-    h1 {
-        color: @dark_gray;
-    }
-}
-.btn-student {
+  margin-top: 8%;
+  align-content: center;
+  align-items: center;
+  h1 {
+    color: @dark_gray;
+  }
+  .add-students {
+    width: 100%;
+    margin-top: 0.5%;
+  }
+  .btn-student {
     padding: 5px;
     border-radius: 5px;
-    border-color: @green;
+    border-color: @primary-color;
     font-size: 16px;
-    cursor: pointer
+    cursor: pointer;
+    outline: 0;
+  }
+  .add-students {
+    background-color: #f9f9f9;
+    padding: 2%;
+    border-radius: 5px;
+
+    .btn-add {
+      width: 15%;
+      margin-left: 8%;
+    }
+  }
+  .btn-student:active {
+    padding: 5px;
+    border-radius: 5px;
+    border-color: white;
+    background-color: @primary-color;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    outline: 0;
+  }
+}
+.ant-col-24,
+.ant-col-offset-3 {
+  width: 100%;
+}
+.ant-table-wrapper {
+  margin-top: 5%;
+}
+.ant-row,
+.content-mainpage {
+  width: 100%;
 }

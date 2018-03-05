@@ -5,18 +5,24 @@ import "./students.less";
 
 const columns = [
   {
-    title: "Name",
+    title: "Estudante",
     dataIndex: "name",
     width: 150
   },
   {
-    title: "Age",
-    dataIndex: "age",
-    width: 150
+    title: "Matrícula",
+    dataIndex: "matricula",
+    width: 120
   },
   {
-    title: "Address",
-    dataIndex: "address"
+    title: "Série",
+    dataIndex: "serie",
+    width:120
+  },
+  {
+    title: "Data de nascimento",
+    dataIndex: "date",
+    width: 120
   }
 ];
 
@@ -25,8 +31,9 @@ for (let i = 0; i < 100; i++) {
   data.push({
     key: i,
     name: `Edward King ${i}`,
-    age: 32,
-    address: `London, Park Lane no. ${i}`
+    matricula: 31894712,
+    serie: `3A`,
+    date:`1999-18-22`
   });
 }
 
@@ -34,12 +41,8 @@ class Students extends Component {
   render() {
     return (
       <div>
-        <Table
-          columns={columns}
-          dataSource={data}
-          pagination={{ pageSize: 50 }}
-          scroll={{ y: 240 }}
-        />
+         <Table columns={columns} dataSource={data} pagination={{ pageSize: 50 }} scroll={{ y: 500 }} />
+         
       </div>
     );
   }

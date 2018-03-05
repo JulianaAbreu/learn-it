@@ -11,6 +11,12 @@ const eslintFormatter = require("react-dev-utils/eslintFormatter");
 const ModuleScopePlugin = require("react-dev-utils/ModuleScopePlugin");
 const getClientEnvironment = require("./env");
 const paths = require("./paths");
+const fs  = require('fs');
+
+const lessToJs = require('less-vars-to-js');
+
+const themeDefault = lessToJs(fs.readFileSync(path.join(__dirname, '../src/assets/styles/defaultTheme.less'), 'utf8'));
+
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
@@ -147,7 +153,7 @@ module.exports = {
               // directory for faster rebuilds.
               cacheDirectory: true,
               plugins: [
-                ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }] // `style: true` for less
+                ["import", {"libraryName": "antd", "style": true} ]
               ]
             }
           },
@@ -168,8 +174,9 @@ module.exports = {
               {
                 loader: "less-loader",
                 options: {
-                  strictMath: true,
-                  noIeCompat: true
+                 
+                  noIeCompat: true,
+                  modifyVars: themeDefault
                 }
               }
             ]

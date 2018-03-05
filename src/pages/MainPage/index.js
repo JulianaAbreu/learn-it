@@ -7,7 +7,7 @@ import Students from "../../components/Students"
 const MainPage = () => {
   return (
     <Row className="content-mainpage">
-      <Col span={24} offset={3}>
+      <Col span={16} offset={4}>
         <div className="add-student">
             <AddStudents/>
         </div>
