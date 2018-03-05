@@ -27,7 +27,7 @@ class AddStudents extends Component {
     return (
       <div className="content-student">
         <h1>Estudantes</h1>
-        <button className="btn-student" onClick={this.onClickAddStudent}>
+        <button className={onButton.on ? 'clicked-btn' : 'btn-student'} onClick={this.onClickAddStudent}>
           Novo Estudante
         </button>
         {onButton.on ? (
@@ -41,7 +41,7 @@ class AddStudents extends Component {
                 />
               </Col>
               <Col span={3}>
-                <InputNumber
+                <Input
                   min={1}
                   max={10}
                   placeholder="31894712"

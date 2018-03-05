@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddStudents /> should Change state of add button 1`] = `
+<div
+  className="content-student"
+>
+  <h1>
+    Estudantes
+  </h1>
+  <button
+    className="btn-student"
+    onClick={[Function]}
+  >
+    Novo Estudante
+  </button>
+  
+</div>
+`;
+
+exports[`<AddStudents /> should not have the filters visible 1`] = `
+<div
+  className="content-student"
+>
+  <h1>
+    Estudantes
+  </h1>
+  <button
+    className="btn-student"
+    onClick={[Function]}
+  >
+    Novo Estudante
+  </button>
+  
+</div>
+`;
