@@ -19,7 +19,6 @@ class AddStudents extends Component {
     this.setState({
       on: !this.state.on
     });
-    console.log(this.state.on);
   };
 
   handleChangeName = e => {
@@ -32,7 +31,6 @@ class AddStudents extends Component {
     this.setState({
       registration: number
     });
-
   };
 
   handleChangeClassroom = e => {
@@ -108,7 +106,11 @@ class AddStudents extends Component {
               </Col>
               <Col span={3}>
                 <label>Matrícula</label>
-                <InputNumber min={1} max={10} placeholder="31894712" onChange={this.handleChangeRegistration} />
+                <InputNumber
+                  min={1}
+                  placeholder="31894712"
+                  onChange={this.handleChangeRegistration}
+                />
               </Col>
               <Col span={4}>
                 <label>Série</label>

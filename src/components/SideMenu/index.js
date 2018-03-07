@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faGraduationCap } from '@fortawesome/fontawesome-free-solid';
 import { faListUl } from '@fortawesome/fontawesome-free-solid';
 import {faMale} from '@fortawesome/fontawesome-free-solid'
@@ -39,8 +39,7 @@ class SideMenu extends Component {
   }
 
   onCLickOption = () => {
-   const hover= "hover";
-   return hover;
+    console.log('aqui')
   }
 
   render() {
