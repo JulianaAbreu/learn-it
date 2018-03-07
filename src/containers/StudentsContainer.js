@@ -4,7 +4,7 @@ import {listStudents} from "../actions/studentsAction";
 
 const mapStateToProps = state => {
     return {
-        itemsStudents: state.studentsReducer
+        students: state.studentsReducer
     };
 }
 

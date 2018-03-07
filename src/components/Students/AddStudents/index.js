@@ -27,9 +27,9 @@ class AddStudents extends Component {
     return (
       <div className="content-student">
         <h1>Estudantes</h1>
-        <button className={onButton.on ? 'clicked-btn' : 'btn-student'} onClick={this.onClickAddStudent}>
-          Novo Estudante
-        </button>
+        <Button type="primary" ghost  className={onButton.on ? 'clicked-btn' : 'btn-student'} onClick={this.onClickAddStudent} >Novo Estudante</Button>
+
+      
         {onButton.on ? (
           <section className="add-students">
             <Row gutter={12}>

@@ -10,44 +10,39 @@ const columns = [
     width: 150
   },
   {
-    title: "Matrícula",
-    dataIndex: "matricula",
+    title: "Série",
+    dataIndex: "classroom",
     width: 120
   },
   {
-    title: "Série",
-    dataIndex: "serie",
-    width:120
+    title: "Matrícula",
+    dataIndex: "registration",
+    width: 120
   },
   {
     title: "Data de nascimento",
-    dataIndex: "date",
+    dataIndex: "dateOfBirth",
     width: 120
   }
 ];
 
-const data = [];
-for (let i = 0; i < 100; i++) {
-  data.push({
-    key: i,
-    name: `Edward King ${i}`,
-    matricula: 31894712,
-    serie: `3A`,
-    date:`1999-18-22`
-  });
-}
-
 class Students extends Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.listStudents();
-}
+  }
+
   render() {
-   let {itemsStudents} = this.props;
-   console.log(itemsStudents);
+    const { students } = this.props;
+    console.log(students.length)
+    
     return (
       <div>
-         <Table columns={columns} dataSource={data} pagination={{ pageSize: 50 }} scroll={{ y: 500 }} />
-         
+        <Table
+          columns={columns}
+          dataSource={[...students]}
+          pagination={50}
+          rowKey={(students, index) => index}
+        />
       </div>
     );
   }
