@@ -7,7 +7,6 @@ export const studentsReducer = (state = [], action) => {
     case ADD_STUDENTS:
       const { data } = action;
       const newData = state.concat(data);
-      
       return newData;
 
     default:
