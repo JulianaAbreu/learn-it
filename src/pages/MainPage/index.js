@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "antd";
 
 import AddStudents from "../../components/Students/AddStudents"
-import Students from "../../components/Students"
+import StudentsContainer from "../../containers/StudentsContainer"
 
 const MainPage = () => {
   return (
@@ -12,7 +12,7 @@ const MainPage = () => {
             <AddStudents/>
         </div>
         <div>
-            <Students />          
+            <StudentsContainer />          
        </div>
       </Col>
     </Row>

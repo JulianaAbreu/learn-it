@@ -38,7 +38,12 @@ for (let i = 0; i < 100; i++) {
 }
 
 class Students extends Component {
+  componentDidMount() {
+    this.props.listStudents();
+}
   render() {
+   let {itemsStudents} = this.props;
+   console.log(itemsStudents);
     return (
       <div>
          <Table columns={columns} dataSource={data} pagination={{ pageSize: 50 }} scroll={{ y: 500 }} />

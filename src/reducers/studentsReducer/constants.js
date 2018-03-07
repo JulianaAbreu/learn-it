@@ -1,0 +1,1 @@
+export const LIST_STUDENTS = 'LIST_STUDENTS';
