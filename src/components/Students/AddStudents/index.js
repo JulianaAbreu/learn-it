@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Input, Button, Row, Col } from "antd";
+import { Input, InputNumber, Button, Row, Col } from "antd";
 
 import "./addStudents.less";
 
@@ -28,10 +28,11 @@ class AddStudents extends Component {
     });
   };
 
-  handleChangeRegistration = e => {
+  handleChangeRegistration = number => {
     this.setState({
-      registration: e.target.value
+      registration: number
     });
+
   };
 
   handleChangeClassroom = e => {
@@ -79,7 +80,6 @@ class AddStudents extends Component {
     });
   };
 
-
   render() {
     const onButton = this.state;
 
@@ -98,23 +98,20 @@ class AddStudents extends Component {
           <section className="add-students">
             <Row gutter={12}>
               <Col span={6}>
+                <label>Estudante</label>
                 <Input
-                  placeholder="Nome do estudante"
+                  placeholder="Juliana Cerqueira"
                   className="input-name"
-                  Row={2}
+                  row={2}
                   onChange={this.handleChangeName}
                 />
               </Col>
               <Col span={3}>
-                <Input
-                  min={1}
-                  max={10}
-                  placeholder="Matrícula"
-                  className="input-date"
-                  onChange={this.handleChangeRegistration}
-                />
+                <label>Matrícula</label>
+                <InputNumber min={1} max={10} placeholder="31894712" onChange={this.handleChangeRegistration} />
               </Col>
               <Col span={4}>
+                <label>Série</label>
                 <Input
                   placeholder="3A"
                   className="classroom"
@@ -122,13 +119,18 @@ class AddStudents extends Component {
                 />
               </Col>
               <Col span={4}>
+                <label>Registro geral</label>
                 <Input
-                  placeholder="RG"
+                  placeholder="37.216.589-8"
                   className="classroom"
                   onChange={this.handleChangeRg}
                 />
               </Col>
-              <Button type="primary" className="btn-add" onClick={this.submitStudents}>
+              <Button
+                type="primary"
+                className="btn-add"
+                onClick={this.submitStudents}
+              >
                 Inserir
               </Button>
             </Row>

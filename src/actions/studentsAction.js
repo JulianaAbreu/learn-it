@@ -18,7 +18,6 @@ export const listStudents = () => dispatch => {
 export const addStudents = body => dispatch => {
     return post("student", body)
       .then(data => {
-        console.log(data)
         return dispatch({
           type: ADD_STUDENTS,
           data
