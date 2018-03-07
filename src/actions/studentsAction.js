@@ -1,5 +1,5 @@
-import { get } from "../modules/request";
-import { LIST_STUDENTS } from '../reducers/studentsReducer/constants';
+import { get, post } from "../modules/request";
+import { LIST_STUDENTS, ADD_STUDENTS } from '../reducers/studentsReducer/constants';
 
 
 export const listStudents = () => dispatch => {
@@ -14,3 +14,17 @@ export const listStudents = () => dispatch => {
         throw new Error('Error in response request', error.message);
     })
 }
+
+export const addStudents = body => dispatch => {
+    return post("student", body)
+      .then(data => {
+        console.log(data)
+        return dispatch({
+          type: ADD_STUDENTS,
+          data
+        });
+      })
+      .catch(error => {
+      });
+  };
+  

@@ -20,21 +20,20 @@ const columns = [
     width: 120
   },
   {
-    title: "Data de nascimento",
-    dataIndex: "dateOfBirth",
+    title: "RG",
+    dataIndex: "rg",
     width: 120
   }
 ];
 
 class Students extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.listStudents();
   }
 
   render() {
     const { students } = this.props;
-    console.log(students.length)
-    
+
     return (
       <div>
         <Table

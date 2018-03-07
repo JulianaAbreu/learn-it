@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "antd";
 
-import AddStudents from "../../components/Students/AddStudents"
+import AddStudentsContainer from "../../containers/AddStudentContainer";
 import StudentsContainer from "../../containers/StudentsContainer"
 
 const MainPage = () => {
@@ -9,7 +9,7 @@ const MainPage = () => {
     <Row className="content-mainpage">
       <Col span={16} offset={4}>
         <div className="add-student">
-            <AddStudents/>
+            <AddStudentsContainer/>
         </div>
         <div>
             <StudentsContainer />          
