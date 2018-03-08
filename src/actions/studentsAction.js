@@ -1,5 +1,5 @@
 import { get, post } from "../modules/request";
-import { LIST_STUDENTS, ADD_STUDENTS } from '../reducers/studentsReducer/constants';
+import { LIST_STUDENTS, ADD_STUDENTS, REMOVE_STUDENT } from '../reducers/studentsReducer/constants';
 
 
 export const listStudents = () => dispatch => {
@@ -24,6 +24,13 @@ export const addStudents = body => dispatch => {
         });
       })
       .catch(error => {
+      });
+  };
+
+  export const removeStudent = index => dispatch => {
+    return dispatch({
+        type: REMOVE_STUDENT,
+        index: index
       });
   };
   

@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Students from "../components/Students";
-import { listStudents } from "../actions/studentsAction";
+import { listStudents, removeStudent } from "../actions/studentsAction";
 
 const mapStateToProps = state => {
   return {
@@ -9,9 +9,14 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  listStudents: () => {
-    return dispatch(listStudents());
-  }
+    
+    removeStudent: (index) => {
+      dispatch(removeStudent(index))
+    },
+    listStudents: () => {
+      dispatch(listStudents())
+    },
+  
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Students);
